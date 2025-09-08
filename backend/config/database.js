@@ -13,7 +13,7 @@ const connectDatabase = () => {
   mongoose
     .connect(process.env.DB_URI)
     .then(() => console.log("✅ Database connected successfully.."))
-    .catch((err) => console.error("❌ DB connection error:", err));
+    // .catch((err) => console.error("❌ DB connection error:", err)); i comment this becasue i handle unhandled error in server file.
 };
 
 module.exports = connectDatabase;
